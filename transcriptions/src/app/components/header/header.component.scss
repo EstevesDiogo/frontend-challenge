@@ -1,0 +1,34 @@
+@import '../../../assets/variables';
+
+.header-container {
+  display: flex;
+  height: 69px;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  background-color: $white-color;
+  align-items: center;
+  justify-content: space-between;
+  }
+
+.app-title {
+  color: $title-app-color;
+  font-family: $title-font;
+  font-size: $medium-size;
+  font-weight: $title-app-font-weight;
+  margin-left: 16.3%;
+  }
+
+.header-icons-container {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 16.5%;
+  }
+
+.upload-icon {
+  margin-right: 31px;
+  }
+
+.upload-icon:hover,
+.show-icon:hover {
+  cursor: pointer;
+  }

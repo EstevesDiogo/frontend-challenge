@@ -1,0 +1,23 @@
+<main class='main-container' *ngIf='onChangeStatus()'>
+  <section class='element' *ngFor='let element of elements; let i = index'>
+    <div class='element-header'>
+      <div class='element-title-container'>
+        <span class='checkbox checked'>&#10004;</span>
+        <img [src]='personIcon' alt='person'>
+        <span *ngIf='!element.isNew' (click)='editItem(i)' class='element-title'>{{ element.voice }}</span>
+        <label>
+          <input *ngIf="element.isNew" type="text" [(ngModel)]='element.voice'>
+        </label>
+      </div>
+      <img [src]='deleteIcon' alt='delete' (click)="deleteItem(i)" class='delete-icon'>
+    </div>
+    <span *ngIf="!element.isNew" (click)='editItem(i)' class='element-content'>{{ element.text }}</span>
+    <label>
+      <input *ngIf="element.isNew" type="text" [(ngModel)]='element.text'>
+    </label>
+    <input type='button' *ngIf='element.isNew' (click)='saveItem(i)' value='Save'>
+  </section>
+  <section class='main-add-icon'>
+    <img [src]='addIcon' alt='add' (click)='addNewElement()' class='add-icon'>
+  </section>
+</main>
