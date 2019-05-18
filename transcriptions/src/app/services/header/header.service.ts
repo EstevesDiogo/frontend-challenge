@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import { ElementModel } from '../../models/element/elementModel';
 import { HttpClient } from '@angular/common/http';
 
 @Injectable( {
@@ -10,7 +9,7 @@ export class HeaderService {
   uploadIcon = '../../../assets/upload.svg';
   showIcon = '../../../assets/fetch-document.svg';
   showElements = false;
-  Url = 'http://www.mocky.io/v2/5ae1c5792d00004d009d7e5c';
+  url = 'http://www.mocky.io/v2/5ae1c5792d00004d009d7e5c';
 
   constructor( private http: HttpClient ) {
   }
@@ -19,7 +18,7 @@ export class HeaderService {
     return this.showElements = true;
   }
 
-  postData( elements: ElementModel[] ) {
-    this.http.post( this.Url, { data: elements } );
+  postData( elements ) {
+    this.http.post( this.url, { data: elements } );
   }
 }

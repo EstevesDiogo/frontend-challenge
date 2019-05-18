@@ -1,0 +1,20 @@
+<section class='element'>
+  <div class='element-header'>
+    <div class='element-title-container'>
+      <span class='checkbox' [ngClass]="{'checked' :checked}" (click)='checked=!checked'>&#10004;</span>
+      <img [src]='personIcon' alt='person'>
+      <span *ngIf='!element.isNew' (click)='editItem()' class='element-title'>{{ element.voice }}</span>
+      <label>
+        <input class='input-title' *ngIf="element.isNew" type="text" [(ngModel)]='element.voice'>
+      </label>
+    </div>
+    <img [src]='deleteIcon' alt='delete' (click)="deleteItem()" class='delete-icon'>
+  </div>
+  <span *ngIf="!element.isNew" (click)='editItem()' class='element-content'>{{ element.text }}</span>
+  <label>
+    <textarea class='input-content' *ngIf="element.isNew" type="text" [(ngModel)]='element.text'>
+      {{ element.text }}
+    </textarea>
+  </label>
+  <input class='btn' type='button' *ngIf='element.isNew' (click)='saveItem()' value='Save'>
+</section>

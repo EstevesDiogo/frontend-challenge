@@ -1,7 +1,7 @@
 <header class='header-container'>
-  <span class='app-title'>{{ title }}</span>
+  <app-title></app-title>
   <div class='header-icons-container'>
-    <img [src]='uploadIcon' alt='upload' (click)='onPostClick()' class='upload-icon'>
-    <img [src]='showIcon' (click)='onFetchClick()' alt='show' class='show-icon'>
+    <app-send-elements></app-send-elements>
+    <app-show-elements></app-show-elements>
   </div>
 </header>

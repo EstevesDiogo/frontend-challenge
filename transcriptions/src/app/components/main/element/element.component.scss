@@ -1,0 +1,95 @@
+@import '../../../../assets/variables';
+
+.element {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #eaedef;
+  background-color: $white-color;
+  }
+
+.element-header {
+  display: flex;
+  justify-content: space-between;
+  margin: 24px 24px 10px;
+  align-items: center;
+  }
+
+.checkbox {
+  width: $regular-size;
+  height: $regular-size;
+  border-radius: 2px;
+  border: 2px solid $purple-color;
+  background-color: $white-color;
+  color: $white-color;
+  margin-right: $regular-size;
+  line-height: 14px;
+  }
+
+.checked {
+  background-color: $purple-color;
+  }
+
+.element-title-container {
+  display: flex;
+  align-items: center
+  }
+
+.element-title {
+  font-family: $title-font;
+  font-weight: $title-font-weight;
+  font-size: $regular-size;
+  color: $title-color;
+  margin-left: 8px;
+  }
+
+.input-title {
+  margin-left: $regular-size;
+  border-radius: 2px;
+  border: 2px solid $purple-color;
+  font-family: $title-font;
+  font-weight: $title-font-weight;
+  font-size: $regular-size;
+  color: $title-color;
+  width: 80%;
+  }
+
+.element-content {
+  margin: 0 7% 24px 12%;
+  font-family: $content-font;
+  font-weight: $content-font-weight;
+  font-size: $regular-size;
+  color: $content-color;
+  }
+
+.input-content {
+  border-radius: 2px;
+  border: 2px solid $purple-color;
+  margin: 0 7% 24px 12%;
+  font-family: $content-font;
+  font-weight: $content-font-weight;
+  font-size: $regular-size;
+  color: $content-color;
+  width: 80%;
+  height: 100px;
+  }
+
+.btn {
+  border-radius: 2px;
+  border: 2px solid $purple-color;
+  background-color: $purple-color;
+  color: $white-color;
+  font-family: $title-font;
+  font-weight: $title-font-weight;
+  font-size: $regular-size;
+  width: 20%;
+  max-width: 80px;
+  min-width: 55px;
+  margin: 0 7% 24px 12%;
+  }
+
+.checkbox:hover,
+.element-title:hover,
+.delete-icon:hover,
+.element-content:hover {
+  cursor: pointer;
+  }

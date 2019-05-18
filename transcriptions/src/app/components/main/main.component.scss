@@ -7,65 +7,7 @@
   margin: 24px 13.9% 0 13.9%;
   }
 
-.element {
-  display: flex;
-  flex-direction: column;
-  border: 1px solid #eaedef;
-  background-color: $white-color;
-  }
-
-.element-header {
-  display: flex;
-  justify-content: space-between;
-  margin: 24px 24px 10px;
-  align-items: center;
-  }
-
-.checkbox {
-  width: $regular-size;
-  height: $regular-size;
-  border-radius: 2px;
-  border: 2px solid $purple-color;
-  background-color: $white-color;
-  color: $white-color;
-  margin-right: $regular-size;
-  line-height: 14px;
-  }
-
-.checked {
-  background-color: $purple-color;
-  }
-
-.element-title-container {
-  display: flex;
-  align-items: center
-  }
-
-.element-title {
-  font-family: $title-font;
-  font-weight: $title-font-weight;
-  font-size: $regular-size;
-  color: $title-color;
-  margin-left: 8px;
-  }
-
-.element-content {
-  margin: 0 7% 24px 12%;
-  font-family: $content-font;
-  font-weight: $content-font-weight;
-  font-size: $regular-size;
-  color: $content-color;
-  }
-
 .main-add-icon {
   align-self: center;
   margin-top: 24px;
-  }
-
-.checkbox:hover,
-.element-title:hover,
-.delete-icon:hover,
-.element-content:hover,
-.add-icon:hover {
-  cursor: pointer;
   }

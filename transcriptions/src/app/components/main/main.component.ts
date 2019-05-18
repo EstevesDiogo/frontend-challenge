@@ -12,7 +12,6 @@ export class MainComponent implements OnInit {
   elements: ElementModel[] = [];
   personIcon: string;
   deleteIcon: string;
-  addIcon: string;
   showElements: boolean;
 
   constructor( private elementService: ElementService, private headerService: HeaderService ) { }
@@ -25,7 +24,6 @@ export class MainComponent implements OnInit {
       } );
     this.personIcon = this.elementService.personIcon;
     this.deleteIcon = this.elementService.deleteIcon;
-    this.addIcon = this.elementService.addIcon;
   }
 
   deleteItem( index: number ) {
@@ -38,15 +36,6 @@ export class MainComponent implements OnInit {
 
   editItem( index: number ) {
     this.elements[ index ].isNew = true;
-  }
-
-  addNewElement() {
-    const newItem: ElementModel = new ElementModel();
-    newItem.text = '';
-    newItem.id = this.elements.length;
-    newItem.voice = '';
-    newItem.isNew = true;
-    this.elements.push( newItem );
   }
 
   onChangeStatus() {
