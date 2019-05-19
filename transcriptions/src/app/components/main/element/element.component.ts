@@ -13,8 +13,8 @@ export class ElementComponent implements OnInit {
   deleteIcon: string;
   checked: boolean;
 
-  @Output() editItemEvent = new EventEmitter();
-  @Output() deleteIconEvent = new EventEmitter();
+  @Output() editElementEvent = new EventEmitter();
+  @Output() deleteElementEvent = new EventEmitter();
   @Output() saveElementEvent = new EventEmitter();
 
   constructor( private elementService: ElementService ) {
@@ -26,11 +26,11 @@ export class ElementComponent implements OnInit {
   }
 
   editItem() {
-    return this.editItemEvent.emit();
+    return this.editElementEvent.emit();
   }
 
   deleteItem() {
-    return this.deleteIconEvent.emit();
+    return this.deleteElementEvent.emit();
   }
 
   saveItem() {

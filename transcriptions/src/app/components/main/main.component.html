@@ -2,8 +2,8 @@
   <app-element
     *ngFor='let element of elements; let i = index'
     [element]="element"
-    (editItemEvent)='editItem(i)'
-    (deleteIconEvent)='deleteItem(i)'
+    (editElementEvent)="editItem(i)"
+    (deleteElementEvent)="deleteItem(i)"
     (saveElementEvent)='saveItem(i)'>
   </app-element>
   <section class='main-add-icon'>
