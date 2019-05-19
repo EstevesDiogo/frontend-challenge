@@ -19,6 +19,6 @@ export class AddElementComponent implements OnInit {
   }
 
   addNewElement() {
-    return this.elements.push( { id: this.elements.length + 1, voice: '', text: '', isNew: true } );
+    return this.elements.push( { id: this.elements.length + 1, voice: '', text: '', isEditable: true } );
   }
 }

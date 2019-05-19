@@ -12,6 +12,7 @@ export class ElementComponent implements OnInit {
   personIcon: string;
   deleteIcon: string;
   checked: boolean;
+
   @Output() editItemEvent = new EventEmitter();
   @Output() deleteIconEvent = new EventEmitter();
   @Output() saveElementEvent = new EventEmitter();
@@ -25,15 +26,15 @@ export class ElementComponent implements OnInit {
   }
 
   editItem() {
-    this.editItemEvent.emit();
+    return this.editItemEvent.emit();
   }
 
   deleteItem() {
-    this.deleteIconEvent.emit();
+    return this.deleteIconEvent.emit();
   }
 
   saveItem() {
-    this.saveElementEvent.emit();
+    return this.saveElementEvent.emit();
   }
 
 }

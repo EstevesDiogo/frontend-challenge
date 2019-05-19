@@ -31,11 +31,11 @@ export class MainComponent implements OnInit {
   }
 
   saveItem( index: number ) {
-    return this.elements[ index ].isNew = false;
+    return this.elements[ index ].isEditable = false;
   }
 
   editItem( index: number ) {
-    return this.elements[ index ].isNew = true;
+    return this.elements[ index ].isEditable = true;
   }
 
   onChangeStatus() {
