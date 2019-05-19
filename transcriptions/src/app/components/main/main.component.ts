@@ -27,15 +27,15 @@ export class MainComponent implements OnInit {
   }
 
   deleteItem( index: number ) {
-    this.elements.splice( index, 1 );
+    return this.elements.splice( index, 1 );
   }
 
   saveItem( index: number ) {
-    this.elements[ index ].isNew = false;
+    return this.elements[ index ].isNew = false;
   }
 
   editItem( index: number ) {
-    this.elements[ index ].isNew = true;
+    return this.elements[ index ].isNew = true;
   }
 
   onChangeStatus() {

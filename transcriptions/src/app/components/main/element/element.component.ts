@@ -3,7 +3,7 @@ import { ElementService } from '../../../services/element/element.service';
 import { ElementModel } from '../../../models/element/elementModel';
 
 @Component( {
-  selector: 'app-element-component',
+  selector: 'app-element',
   templateUrl: './element.component.html',
   styleUrls: [ './element.component.scss' ]
 } )

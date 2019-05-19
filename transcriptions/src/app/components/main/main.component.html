@@ -1,11 +1,11 @@
 <main class='main-container' *ngIf='onChangeStatus()'>
-  <app-element-component
+  <app-element
     *ngFor='let element of elements; let i = index'
     [element]="element"
     (editItemEvent)='editItem(i)'
     (deleteIconEvent)='deleteItem(i)'
     (saveElementEvent)='saveItem(i)'>
-  </app-element-component>
+  </app-element>
   <section class='main-add-icon'>
     <app-add-element></app-add-element>
   </section>
