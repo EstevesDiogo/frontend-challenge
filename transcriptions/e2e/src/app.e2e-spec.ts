@@ -8,17 +8,22 @@ describe( 'workspace-project App', () => {
     page = new AppPage();
   } );
 
-  it( 'should display welcome message', () => {
+  it( 'should display app title', () => {
     AppPage.navigateTo();
     expect( AppPage.getTitleText() ).toEqual( 'Transcriptions' );
-    AppPage.clickUpload();
-    // wait for sometime.
-    // expect(AppPage.getData()).toEqual(value);
-    // AppPage.saveClick()
+  } );
+
+  it( 'should display the upload icon', () => {
+    AppPage.navigateTo();
+    expect( AppPage.getUploadIcon ).toBeTruthy();
+  } );
+
+  it( 'should display the show icon', () => {
+    AppPage.navigateTo();
+    expect( AppPage.getShowIcon ).toBeTruthy();
   } );
 
   afterEach( async () => {
-    // Assert that there are no errors emitted from the browser
     const logs = await browser.manage().logs().get( logging.Type.BROWSER );
     expect( logs ).not.toContain( jasmine.objectContaining( {
       level: logging.Level.SEVERE,
