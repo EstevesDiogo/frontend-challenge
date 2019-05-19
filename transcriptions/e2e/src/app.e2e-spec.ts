@@ -1,23 +1,27 @@
 import { AppPage } from './app.po';
 import { browser, logging } from 'protractor';
 
-describe('workspace-project App', () => {
+describe( 'workspace-project App', () => {
   let page: AppPage;
 
-  beforeEach(() => {
+  beforeEach( () => {
     page = new AppPage();
-  });
+  } );
 
-  it('should display welcome message', () => {
+  it( 'should display welcome message', () => {
     AppPage.navigateTo();
-    expect(AppPage.getTitleText()).toEqual('Welcome to transcriptions!');
-  });
+    expect( AppPage.getTitleText() ).toEqual( 'Transcriptions' );
+    AppPage.clickUpload();
+    // wait for sometime.
+    // expect(AppPage.getData()).toEqual(value);
+    // AppPage.saveClick()
+  } );
 
-  afterEach(async () => {
+  afterEach( async () => {
     // Assert that there are no errors emitted from the browser
-    const logs = await browser.manage().logs().get(logging.Type.BROWSER);
-    expect(logs).not.toContain(jasmine.objectContaining({
+    const logs = await browser.manage().logs().get( logging.Type.BROWSER );
+    expect( logs ).not.toContain( jasmine.objectContaining( {
       level: logging.Level.SEVERE,
-    } as logging.Entry));
-  });
-});
+    } as logging.Entry ) );
+  } );
+} );

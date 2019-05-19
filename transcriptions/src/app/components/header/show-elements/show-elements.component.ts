@@ -17,7 +17,7 @@ export class ShowElementsComponent implements OnInit {
   }
 
   onFetchClick() {
-    this.showElements = this.headerService.getElements();
+    return this.showElements = this.headerService.getElements();
   }
 
 }

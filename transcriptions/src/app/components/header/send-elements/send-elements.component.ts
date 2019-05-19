@@ -17,7 +17,7 @@ export class SendElementsComponent implements OnInit {
   }
 
   onPostClick() {
-    this.headerService.postData( this.elementService.elements
+    return this.headerService.postData( this.elementService.elements
       .map( element => {
           return { id: element.id, voice: element.voice, text: element.text };
         }

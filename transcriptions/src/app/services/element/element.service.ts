@@ -10,12 +10,10 @@ export class ElementService {
   personIcon = '../../../assets/person.svg';
   deleteIcon = '../../../assets/delete.svg';
   addIcon = '../../../assets/add-row.svg';
-  elements: ElementModel[];
-
+  elements: ElementModel[] = [];
   private url = 'http://www.mocky.io/v2/5ae1c5792d00004d009d7e5c';
 
   constructor( private http: HttpClient ) {
-    this.elements = [];
   }
 
   getElements(): Observable<ElementModel[]> {

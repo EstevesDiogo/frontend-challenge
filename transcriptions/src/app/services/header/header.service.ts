@@ -9,7 +9,7 @@ export class HeaderService {
   uploadIcon = '../../../assets/upload.svg';
   showIcon = '../../../assets/fetch-document.svg';
   showElements = false;
-  url = 'http://www.mocky.io/v2/5ae1c5792d00004d009d7e5c';
+  private url = 'http://www.mocky.io/v2/5ae1c5792d00004d009d7e5c';
 
   constructor( private http: HttpClient ) {
   }
@@ -19,6 +19,6 @@ export class HeaderService {
   }
 
   postData( elements ) {
-    this.http.post( this.url, { data: elements } );
+    return this.http.post( this.url, { data: elements } );
   }
 }
